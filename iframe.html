@@ -1,0 +1,38 @@
+<html>
+	<head>
+	<title>HTML Page</title>
+	<script src="./lightning-out.js"></script>
+	<script src="./lightning-out-delegate.js" ></script>
+	
+	
+
+	</head>
+	<body>
+
+<!-- 	<h1>Omniscript form in VF page via Salesforce site</h1>
+
+	<iframe frameBorder="0" width="100%" height="500px" scrolling="yes" src="https://wc--poc--vlocity-cmt.cs6.visual.force.com/apex/vlocity_cmt__OmniScriptUniversalPage?id={0}&OmniScriptType=Customer%20Service&OmniScriptSubType=Report%20Sprinkler%20Breach&OmniScriptLang=English&PrefillDataRaptorBundle=&scriptMode=vertical&ContextId={0}#/"></iframe> -->
+
+	<h1>Omniscript form with Lightning Out</h1>
+	<div id="lightning" />
+
+	<!-- <h1>Omniscript form with OmniOut</h1> -->
+
+	<script>
+    $Lightning.use("c:WaterOutageTable",    // name of the Lightning app
+        function() {                  // Callback once framework and app loaded
+            $Lightning.createComponent(
+                "c:WaterOutageTableComp", // top-level component of your app
+                { },                  // attributes to set on the component when created
+                "lightning",   // the DOM location to insert the component
+                function(cmp) {
+                    // callback when component is created and active on the page
+                }
+            );
+        },
+        'https://poc-myaccount.cs6.force.com/sitecore'  // Community endpoint
+    );
+</script>
+
+	</body>
+</html>	
